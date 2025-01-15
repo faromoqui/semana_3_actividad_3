@@ -6,7 +6,6 @@ from selenium.webdriver.common.keys import Keys
 import unittest
 import time
 
-
 # Configurar opciones para el navegador Chrome
 options = Options()
 options.add_argument('--headless') # Ejecuta Chrome en modo headless
