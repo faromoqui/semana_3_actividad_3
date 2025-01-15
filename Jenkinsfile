@@ -19,7 +19,7 @@ pipeline {
         }
          stage('compilaccion') {
             steps {
-                bat(script: 'python -m unittest discover -s tests', returnStatus: true)
+                bat(script: 'python -m unittest discover -s test', returnStatus: true)
             }
         }
     }
