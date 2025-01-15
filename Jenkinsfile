@@ -14,7 +14,13 @@ pipeline {
         }
          stage('compilaccion') {
             steps {
-                echo 'Hello 2'
+                def result = bat(script: 'python -m unittest discover -s tests', returnStatus: true)
+
+                    // Si el resultado es distinto de 0, significa que los tests fallaron
+                    if (result != 0) {
+                        currentBuild.result = 'FAILURE'
+                        error('Tests fallaron')
+                    }
             }
         }
     }
