@@ -22,10 +22,7 @@ class eis_test(unittest.TestCase):
 		time.sleep(2)
 		browser.find_element(By.XPATH, '/html/body/div[3]/div/div/div[3]/div[3]/a').click()
 		self.assertIn("Carros", browser.title)
-		self.assertIn("Camionetas", browser.title)
-
-
-		
+		self.assertIn("Camionetas", browser.title)		
 
 	def tearDown(self):
 		self.browser.quit()
