@@ -3,8 +3,7 @@ pipeline {
 
     environment {
         // Configura el entorno para enviar correos en caso de error
-        EMAIL_RECIPIENTS = 'fa.ro.montenegro@unillanos.edu.co'
-        GITHUB_REPO_URL = 'https://github.com/tu_usuario/tu_repositorio.git' // Cambia esta URL por la de tu repositorio
+        EMAIL_RECIPIENTS = 'fa.ro.montenegro@unillanos.edu.co'        
     }
     stages {
         stage('Hello') {
