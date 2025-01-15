@@ -27,7 +27,7 @@ pipeline {
         }
         stage('compilaccion') {
             steps {
-                bat(script: 'python -m unittest discover -s test', returnStatus: true)
+                def result = bat(script: 'python -m unittest discover -s test', returnStatus: true)
             }
         }
     }
