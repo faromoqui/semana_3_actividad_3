@@ -17,7 +17,15 @@ pipeline {
                 bat 'python test_ejercicio.py'
             }
         }
-         stage('compilaccion') {
+        stage('Instalar Dependencias') {
+            steps {
+                script {
+                    // Instalar las dependencias, incluyendo Selenium
+                    bat 'pip install selenium'
+                }
+            }
+        }
+        stage('compilaccion') {
             steps {
                 bat(script: 'python -m unittest discover -s test', returnStatus: true)
             }
