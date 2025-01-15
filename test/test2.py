@@ -22,7 +22,7 @@ class eis_test(unittest.TestCase):
 		browser.get("https://www.tucarro.com.co/")
 		time.sleep(2)
 		browser.find_element(By.XPATH, '/html/body/div[3]/div/div/div[3]/div[3]/a').click()
-		self.assertIn("Carros", browser.title)
+		self.assertIn("Carros9", browser.title)
 		self.assertIn("Camionetas", browser.title)
 
 
