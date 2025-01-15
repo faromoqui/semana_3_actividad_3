@@ -30,7 +30,7 @@ pipeline {
                 script {
                     // Ejecutar los tests utilizando unittest y capturar el resultado
                     // Utilizando returnStatus para capturar el código de salida sin necesidad de 'def'
-                    def result = bat(script: 'python -m unittest discover -s tests', returnStatus: true)
+                    def result = bat(script: 'python -m unittest discover -s test', returnStatus: true)
                     
                     // Verificar si los tests fallaron (código distinto de 0)
                     if (result != 0) {
