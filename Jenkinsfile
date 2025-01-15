@@ -9,7 +9,7 @@ pipeline {
         }
         stage('ejecutar test') {
             steps {
-                sh 'python test_ejercicio.py'
+                bat 'python test_ejercicio.py'
             }
         }
          stage('compilaccion') {
